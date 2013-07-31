@@ -15,6 +15,10 @@ class activemq {
   #  require => Package['boxen/brews/activemq']
   #}
 
+  file { "${boxen::config::envdir}/redis.sh":
+    content => template('redis/env.sh.erb')
+  }
+
   homebrew::formula { 'activemq':
     before => Package['boxen/brews/activemq'],
   }
