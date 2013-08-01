@@ -15,7 +15,7 @@ class activemq {
   #  require => Package['boxen/brews/activemq']
   #}
 
-  file { "${boxen::config::envdir}/redis.sh":
+  file { "${boxen::config::envdir}/activemq.sh":
     content => template('redis/env.sh.erb')
   }
 
