@@ -16,7 +16,7 @@ class activemq {
   #}
 
   file { "${boxen::config::envdir}/activemq.sh":
-    content => template('redis/env.sh.erb')
+    content => template('activemq/env.sh.erb'),
   }
 
   homebrew::formula { 'activemq':
